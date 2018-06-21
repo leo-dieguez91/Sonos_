@@ -46,21 +46,35 @@
       </div>
 
         <div class="col-10 col-lg-5 p-1">
-          <form class="col-lg-12" method="post">
+          <form method="POST" action="{{ route('login') }}">
+              @csrf
             <div class="form-inline ">
               <div class="col-10 col-sm-9 col-md-8 col-lg-8 p-0 ml-lg-auto">
                 <div class="input-group mr-2 ">
 
-                    <input type="text" name="email" class="form-control mr-2 col-7" id="inlineFormInputName2" placeholder="Email" value="" data-toggle="tooltip" title="" value="{{old('email')}}">
+                    <input type="text" name="4" class="form-control mr-2 col-7" id="inlineFormInputName2" placeholder="Email" value="" data-toggle="tooltip" title="" value="{{old('email')}}">
+                    @if ($errors->has('email'))
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $errors->first('email') }}</strong>
+                        </span>
+                    @endif
                     <!-- <span class="errores2">?></span> -->
 
                     <input type="password" name="pass" class="form-control col-5" id="inlineFormInputName2" placeholder="Contraseña" value="" data-toggle="tooltip" title="">
+                    @if ($errors->has('password'))
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $errors->first('password') }}</strong>
+                        </span>
+                    @endif
                     <!-- <span class="errores2">?></span> -->
 
                 </div>
               </div>
-              <button type="submit" class="btn btn-sm ml-1 pl-2 pr-2 hidden-xs" style="font-size: 0.6em;font-weight:bold;" name="login"> <span class="ion-log-in"></span> Ingresar </button>
-              <button type="submit" class="btn btn-sm button-small ml-2 p-0 px-2"style="font-size: 0.7em;font-weight:bold;" name="login"> <span class="ion-log-in"></span></button>
+
+              <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+              
+              {{-- <button type="submit" class="btn btn-sm ml-1 pl-2 pr-2 hidden-xs" style="font-size: 0.6em;font-weight:bold;" name="login"> <span class="ion-log-in"></span> Ingresar </button>
+              <button type="submit" class="btn btn-sm button-small ml-2 p-0 px-2"style="font-size: 0.7em;font-weight:bold;" name="login"> <span class="ion-log-in"></span></button> --}}
             </div>
             <div class="form-check ajusteleft">
               <label class="form-check-label" style="font-size: 0.7em; color:black;"><input class="form-check-input" type="checkbox" name="recordar">Recordarme</label>

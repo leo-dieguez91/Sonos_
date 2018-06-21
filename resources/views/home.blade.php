@@ -1,10 +1,9 @@
-
 @extends('layouts.body')
 
 @section('section')
   <!-- Registro & portada -->
-  <div class="portada-inicial justify-content-center">
-    <div class="container">
+  {{-- <div class="portada-inicial justify-content-center"> --}}
+    <div class="container justify-content-center">
       <div class="row align-items-center">
         <div class="col-12 mt-3">
           <img src="image/logo.png" alt="logo" class="mt-5" style="width: 100%; max-width: 405px;">
@@ -12,57 +11,21 @@
           <br><br>
           <div class="row justify-content-center">
             <div class="col-8 col-md-6 col-lg-6 row-registro mb-4">
-              <form class="mt-3" method="post" enctype="multipart/form-data" action="/register">
-                @csrf
-
-                <div class="col-lg-5 d-inline-block float-left p-0">
-                  <input class="form-control" type="text" placeholder="Nombre" name="name" value="{{ old('name') }}">
-                  <label class="errores">
-
-                      @foreach ($errors->get('name') as $error)
-                        {{ $error }}
-                      @endforeach
-
-                  </label>
-                </div>
-
-                <div class="col-lg-6 ml-sm-auto d-inline-block float-right p-0">
-                  <input class="form-control" type="text" placeholder="Apellido" name="last_name" value="{{ old('last_name') }}">
-                  <label class="errores">
-
-                      @foreach ($errors->get('last_name') as $error)
-                        {{ $error }}
-                      @endforeach
-
-                  </label>
-                </div>
-
-
-                <input class="form-control" type="text" placeholder="Ingresá tu e-mail" name="email" value="{{ old('email') }}">
-                <label for="email" class="errores">
-                  @foreach ($errors->get('email') as $error)
-                      {{ $error }}
-                  @endforeach
-                </label>
-
-                <input class="form-control" type="password" placeholder="Creá tu contraseña" name="password">
-                <label class="errores">
-                  @foreach ($errors->get('password') as $error)
-                      {{ $error }}
-                  @endforeach
-                </label>
-
-                <div class="form-group">
-                  <button class="btn my-2" type="submit" name="register">Registrarme</button>
-                </div>
-
-              </form>
+              @guest
+                <h2>Hola visitante</h2>
+              @else
+                <h2>{{ Auth::user()->first_name }}</h2> <span class="caret"></span>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                  @csrf
+                  <button type="submit">salir</button>
+                </form>
+              @endguest
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  {{-- </div> --}}
 @endsection
 
 @section('section2')

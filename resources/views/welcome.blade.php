@@ -2,6 +2,7 @@
 
 @section('section')
   <!-- Registro & portada -->
+
   <div class="portada-inicial justify-content-center">
     <div class="container">
       <div class="row align-items-center">
@@ -11,14 +12,15 @@
           <br><br>
           <div class="row justify-content-center">
             <div class="col-8 col-md-6 col-lg-6 row-registro mb-4">
-              <form class="mt-3" method="post" enctype="multipart/form-data" action="/register">
-                @csrf
+
+              <form class="mt-3" method="post" enctype="multipart/form-data" action="{{ route('register') }}">
+              {{ csrf_field() }}
 
                 <div class="col-lg-5 d-inline-block float-left p-0">
-                  <input class="form-control" type="text" placeholder="Nombre" name="name" value="{{ old('name') }}">
+                  <input class="form-control" type="text" placeholder="Nombre" name="first_name" value="{{ old('first_name') }}">
                   <label class="errores">
 
-                      @foreach ($errors->get('name') as $error)
+                      @foreach ($errors->get('first_name') as $error)
                         {{ $error }}
                       @endforeach
 
@@ -67,6 +69,7 @@
 @section('section2')
   <!--  Quienes Somos -->
   <section class="container-fluid border fondoNeutro justify-content-center align-items-center" id="QuienesSomos">
+
     <h1 class="my-5 text-center display-3">Quienes somos</h1>
     <div class="col text-center border py-3 mb-5">
       <p>En <em>Sonos!</em> buscamos reunir personas con la misma pasión por la música. <br>
