@@ -46,7 +46,9 @@
       </div>
 
         <div class="col-10 col-lg-5 p-1">
-          <form method="POST" action="{{ route('login') }}">
+          @guest
+
+          {{-- <form method="POST" action="{{ route('login') }}">
               @csrf
             <div class="form-inline ">
               <div class="col-10 col-sm-9 col-md-8 col-lg-8 p-0 ml-lg-auto">
@@ -72,15 +74,41 @@
               </div>
 
               <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-              
-              {{-- <button type="submit" class="btn btn-sm ml-1 pl-2 pr-2 hidden-xs" style="font-size: 0.6em;font-weight:bold;" name="login"> <span class="ion-log-in"></span> Ingresar </button>
-              <button type="submit" class="btn btn-sm button-small ml-2 p-0 px-2"style="font-size: 0.7em;font-weight:bold;" name="login"> <span class="ion-log-in"></span></button> --}}
+
+              <button type="submit" class="btn btn-sm ml-1 pl-2 pr-2 hidden-xs" style="font-size: 0.6em;font-weight:bold;" name="login"> <span class="ion-log-in"></span> Ingresar </button>
+              <button type="submit" class="btn btn-sm button-small ml-2 p-0 px-2"style="font-size: 0.7em;font-weight:bold;" name="login"> <span class="ion-log-in"></span></button>
             </div>
             <div class="form-check ajusteleft">
               <label class="form-check-label" style="font-size: 0.7em; color:black;"><input class="form-check-input" type="checkbox" name="recordar">Recordarme</label>
               <a href="#" class="ml-1 ml-sm-5">¿Olvidaste tu contraseña?</a>
             </div>
-          </form>
+          </form> --}}
+
+          <a class="btn btn-sm ml-1 pl-2 pr-2 hidden-xs" href="{{ route('login') }}">{{ __('Login') }}</a>
+
+
+        @else
+          <div class="btn-group mb-1 mt-1">
+            <button type="button" class="btn dropdown-nav mr-2" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false"style="width: 100%; height:55px;">
+              <div class="d-inline col-md-6 text-left">
+                  <h2>{{ Auth::user()->first_name }}</h2> <span class="caret"></span>
+              </div>
+              <div class="d-inline col-md-6">
+                {{-- <img src="" alt="avatar" class="rounded-circle" width="40" height="40"> --}}
+              </div>
+            </button>
+            <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
+              <a class="dropdown-item" href="perfil.php">Perfil</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#!">Calendario</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" id="logout-form" href="{{ route('logout') }}">Cerrar Sesión</a>
+            </div>
+          </div>
+
+
+        @endguest
         </div>
     </div>
   </div>
