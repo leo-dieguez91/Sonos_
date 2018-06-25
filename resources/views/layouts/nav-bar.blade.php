@@ -103,7 +103,14 @@
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#!">Calendario</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" id="logout-form" href="{{ route('logout') }}">Cerrar Sesión</a>
+              <a class="dropdown-item" href="{{ route('logout') }}"
+                 onclick="event.preventDefault();
+                               document.getElementById('logout-form').submit();">
+                  {{ __('Cerrar Sesión') }}
+              </a>
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                  @csrf
+              </form>
             </div>
           </div>
 

@@ -47,7 +47,7 @@
                       {{ $error }}
                   @endforeach
                 </label>
-                
+
                 <input id="password-confirm" class="form-control" type="password" placeholder="Confirma tu contraseña" name="password_confirmation">
                 <label class="errores">
                   @foreach ($errors->get('password') as $error)
