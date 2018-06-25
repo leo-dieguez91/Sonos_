@@ -85,8 +85,7 @@
           </form> --}}
             {{-- col-10 col-sm-9 col-md-8 col-lg-8 --}}
           <div class="p-0 mt-2 mx-5">
-            <button type="button" class="btn btn-sm ml-1 pl-2 pr-2 hidden-xs float-right" name="button"><a href="{{ route('login') }}"><span class="ion-log-in"></span> Ingresar</a></button>
-            <button type="button" class="btn btn-sm button-small ml-2 p-0 px-2 float-right"style="font-size: 0.7em;font-weight:bold;" name="login"><a href="{{ route('login') }}"><span class="ion-log-in"></span></a></button>
+            <button type="button" class="btn btn-sm ml-1 pl-2 pr-2 float-right" name="button"><a href="{{ route('login') }}"><span class="ion-log-in"></span> Ingresar</a></button>
           </div>
 
         @else
