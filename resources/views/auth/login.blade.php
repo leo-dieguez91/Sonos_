@@ -1,69 +1,53 @@
-@extends('layouts.app')
+@extends('layouts.body')
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}">
-                        @csrf
+@section('section')
+  <!-- Logueo -->
 
-                        <div class="form-group row">
-                            <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+  <div class="portada-inicial justify-content-center">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 mt-3">
+          <img src="image/logo.png" alt="logo" class="mt-5" style="width: 100%; max-width: 405px;">
+          <em class="titulos d-none d-sm-block text-dark mb-5">La música nos une</em>
+          <br><br>
+          <div class="row justify-content-center">
+            <div class="col-8 col-md-6 col-lg-4 row-registro mb-4">
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+              <form class="my-5" method="POST" enctype="multipart/form-data" action="{{ route('login') }}">
+                @csrf
+                <input class="form-control" id="email" type="email" placeholder="Ingresá tu e-mail" name="email" value="{{ old('email') }}" required autofocus>
+                <label for="email" class="errores">
+                  @foreach ($errors->get('email') as $error)
+                    {{ $error }}
+                  @endforeach
+                </label>
 
-                                @if ($errors->has('email'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+                <input id="password" class="form-control" type="password" placeholder="Ingresá tu contraseña" name="password" required>
+                <label class="errores">
+                  @foreach ($errors->get('password') as $error)
+                    {{ $error }}
+                  @endforeach
+                </label>
 
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                <label style = "color: white">
+                  <input type="checkbox" class="mt-5" name="remember" {{ old('remember') ? 'checked' : '' }}> Recordarme
+                </label>
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    {{ __('Forgot Your Password?') }}
-                                </a>
-                            </div>
-                        </div>
-                    </form>
+                <div class="form-group">
+                  <button class="btn my-3" type="submit" name="login">Ingresar</button>
+                  <button class="btn" type="submit" name="passwordReset">
+                    <a href="{{ route('password.request') }}">
+                      Olvidaste tu contraseña?
+                    </a>
+                  </button>
                 </div>
+              </form>
+
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
+  </div>
 @endsection

@@ -51,9 +51,11 @@ ul, ol{
 
 .errores{
   color:white;
-  background-color: #d9534f;
+  background-color: #5e5e8f;
   border-radius: 5px;
   font-size: 0.8em;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
 }
 
 .errores2{

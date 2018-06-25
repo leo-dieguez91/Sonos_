@@ -50,5 +50,4 @@
       </label>
     </div>
   </section>
-
 @endsection

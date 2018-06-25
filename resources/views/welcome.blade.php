@@ -14,27 +14,22 @@
             <div class="col-8 col-md-6 col-lg-6 row-registro mb-4">
 
               <form class="mt-3" method="post" enctype="multipart/form-data" action="{{ route('register') }}">
-              {{ csrf_field() }}
-
+                @csrf
                 <div class="col-lg-5 d-inline-block float-left p-0">
                   <input class="form-control" type="text" placeholder="Nombre" name="first_name" value="{{ old('first_name') }}">
                   <label class="errores">
-
-                      @foreach ($errors->get('first_name') as $error)
-                        {{ $error }}
-                      @endforeach
-
+                    @foreach ($errors->get('first_name') as $error)
+                      {{ $error }}
+                    @endforeach
                   </label>
                 </div>
 
                 <div class="col-lg-6 ml-sm-auto d-inline-block float-right p-0">
                   <input class="form-control" type="text" placeholder="Apellido" name="last_name" value="{{ old('last_name') }}">
                   <label class="errores">
-
-                      @foreach ($errors->get('last_name') as $error)
-                        {{ $error }}
-                      @endforeach
-
+                    @foreach ($errors->get('last_name') as $error)
+                      {{ $error }}
+                    @endforeach
                   </label>
                 </div>
 
@@ -50,6 +45,13 @@
                 <label class="errores">
                   @foreach ($errors->get('password') as $error)
                       {{ $error }}
+                  @endforeach
+                </label>
+                
+                <input id="password-confirm" class="form-control" type="password" placeholder="Confirma tu contraseña" name="password_confirmation">
+                <label class="errores">
+                  @foreach ($errors->get('password') as $error)
+                    {{ $error }}
                   @endforeach
                 </label>
 
@@ -89,5 +91,4 @@
       </label>
     </div>
   </section>
-
 @endsection
