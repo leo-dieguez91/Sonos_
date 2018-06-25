@@ -1,8 +1,8 @@
 <header class="header-main fixed-top"> <!-- fixed-top -->
   <div class="header-sup ">
 
-    <div class="row justify-content-between">
-      <div class="align-items-start col-1 col-lg-6">
+    <div class="row justify-content-between mb-2">
+      <div class="align-items-start col-6 col-lg-6">
         <div class="col-6">
           <nav class="navbar navbar-expand-lg p-0">
             <div class="collapse navbar-collapse">
@@ -45,7 +45,7 @@
         </div>
       </div>
 
-        <div class="col-10 col-lg-5 p-1">
+        <div class="col-6 col-lg-5 p-1">
           @guest
 
           {{-- <form method="POST" action="{{ route('login') }}">
@@ -83,9 +83,11 @@
               <a href="#" class="ml-1 ml-sm-5">¿Olvidaste tu contraseña?</a>
             </div>
           </form> --}}
-
-          <a class="btn btn-sm ml-1 pl-2 pr-2 hidden-xs" href="{{ route('login') }}">{{ __('Login') }}</a>
-
+            {{-- col-10 col-sm-9 col-md-8 col-lg-8 --}}
+          <div class="p-0 mt-2 mx-5">
+            <button type="button" class="btn btn-sm ml-1 pl-2 pr-2 hidden-xs float-right" name="button"><a href="{{ route('login') }}"><span class="ion-log-in"></span> Ingresar</a></button>
+            <button type="button" class="btn btn-sm button-small ml-2 p-0 px-2 float-right"style="font-size: 0.7em;font-weight:bold;" name="login"><a href="{{ route('login') }}"><span class="ion-log-in"></span></a></button>
+          </div>
 
         @else
           <div class="btn-group mb-1 mt-1">
