@@ -89,13 +89,13 @@
           </div>
 
         @else
-          <div class="btn-group mb-1 mt-1">
+          <div class="btn-group mb-1 mt-1 pull-right pr-3">
             <button type="button" class="btn dropdown-nav mr-2" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false"style="width: 100%; height:55px;">
-              <div class="d-inline col-md-6 text-left">
-                  <h2>{{ Auth::user()->first_name }}</h2> <span class="caret"></span>
+              aria-haspopup="true" aria-expanded="false"style="width: 10em; height:55px;">
+              <div class="col-md-6 text-left">
+                  {{ Auth::user()->first_name}}  {{Auth::user()->last_name }}
               </div>
-              <div class="d-inline col-md-6">
+              <div class="col-md-6">
                 {{-- <img src="" alt="avatar" class="rounded-circle" width="40" height="40"> --}}
               </div>
             </button>

@@ -61,7 +61,7 @@
       .header-sup{
         display: flex;
         justify-content: space-between;
-        height: 62px;
+        /* height: 62px; */
       }
 
       .sidenav {
