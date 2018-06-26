@@ -33,27 +33,32 @@
                   </label>
                 </div>
 
+                <div class="">
+                    <input class="form-control" type="text" placeholder="Ingresá tu e-mail" name="email" value="{{ old('email') }}">
+                  <label for="email" class="errores">
+                    @foreach ($errors->get('email') as $error)
+                        {{ $error }}
+                    @endforeach
+                  </label>
+                </div>
 
-                <input class="form-control" type="text" placeholder="Ingresá tu e-mail" name="email" value="{{ old('email') }}">
-                <label for="email" class="errores">
-                  @foreach ($errors->get('email') as $error)
+                <div class="col-lg-5 ml-sm-auto d-inline-block float-left p-0">
+                  <input class="form-control" type="password" placeholder="Creá tu contraseña" name="password">
+                  <label class="errores">
+                    @foreach ($errors->get('password') as $error)
+                        {{ $error }}
+                    @endforeach
+                  </label>
+                </div>
+
+                <div class="col-lg-6 ml-sm-auto d-inline-block float-right p-0">
+                  <input id="password-confirm" class="form-control" type="password" placeholder="Confirma tu contraseña" name="password_confirmation">
+                  <label class="errores">
+                    @foreach ($errors->get('password') as $error)
                       {{ $error }}
-                  @endforeach
-                </label>
-
-                <input class="form-control" type="password" placeholder="Creá tu contraseña" name="password">
-                <label class="errores">
-                  @foreach ($errors->get('password') as $error)
-                      {{ $error }}
-                  @endforeach
-                </label>
-
-                <input id="password-confirm" class="form-control" type="password" placeholder="Confirma tu contraseña" name="password_confirmation">
-                <label class="errores">
-                  @foreach ($errors->get('password') as $error)
-                    {{ $error }}
-                  @endforeach
-                </label>
+                    @endforeach
+                  </label>
+                </div>
 
                 <div class="form-group">
                   <button class="btn my-2" type="submit" name="register">Registrarme</button>
