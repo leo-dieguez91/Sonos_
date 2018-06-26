@@ -8,7 +8,7 @@ use App\Post;
 class PostsController extends Controller
 {
   public function getPost(){
-    $posts = Post::latest('created_at')->get();
+    $posts = Post::latest('created_at')->paginate(5);
     return view('home', compact('posts'));
   }
 
@@ -28,7 +28,7 @@ class PostsController extends Controller
       'user_id' => auth()->user()->id,
     ]);
 
-    $posts = Post::latest('created_at')->get();
+    $posts = Post::latest('created_at')->paginate(5);
     return view('home', compact('posts'));
   }
 }
