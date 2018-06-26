@@ -100,9 +100,9 @@
               </div>
             </button>
             <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
-              <a class="dropdown-item" href="perfil.php">Perfil</a>
+              <a class="dropdown-item" href="/perfil">Perfil</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#!">Calendario</a>
+              <a class="dropdown-item" href="/home">Home</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="{{ route('logout') }}"
                  onclick="event.preventDefault();
