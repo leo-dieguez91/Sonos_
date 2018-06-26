@@ -93,7 +93,7 @@
             <button type="button" class="btn dropdown-nav mr-2" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false"style="width: 100%; height:55px;">
               <div class="col-md-6 d-inline text-left">
-                  {{ Auth::user()->first_name}}  {{Auth::user()->last_name }}
+                  {{ Auth::user()->first_name}} {{Auth::user()->last_name }}
               </div>
               <div class="col-md-4 d-inline">
                 <img src="{{ Auth::user()->picture}}" alt="avatar" class="rounded-circle" width="40" height="40">

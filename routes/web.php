@@ -14,3 +14,5 @@ Route::get('/faq', 'HomeController@faq');
 Route::get('/home', 'PostsController@getPost')->name('home');
 
 Route::post('/home', 'PostsController@savePost')->name('home');
+
+Route::get('/perfil', 'PerfilController@show');
