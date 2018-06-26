@@ -34,7 +34,7 @@
           <div id="mySidenav" class="sidenav">
             <a href="index.php"><img src="image/logosm.png" alt="logosm"></a>
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a class="nav-link" href="bienvenido.php">Home</a>
+            <a class="nav-link" href="/">Home</a>
             <a href="/faq">Acerca de Sonos!</a>
             <a href="/#QuienesSomos">Quienes Somos</a>
             <a href="#">Grupos</a>

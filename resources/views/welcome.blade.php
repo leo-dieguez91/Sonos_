@@ -17,6 +17,8 @@
           <div class="row justify-content-center">
             @guest
             <div class="col-8 col-md-6 col-lg-6 row-registro mb-4">
+              
+              @if (!auth()->user())
               <form class="mt-3" method="post" enctype="multipart/form-data" action="{{ route('register') }}">
                 @csrf
                 <div class="col-lg-5 d-inline-block float-left p-0">
@@ -69,6 +71,7 @@
                 </div>
 
               </form>
+            @endif
 
             </div>
           @else
