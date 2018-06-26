@@ -11,8 +11,8 @@
           <em class="titulos d-none d-sm-block text-dark mb-5">La música nos une</em>
           <br><br>
           <div class="row justify-content-center">
+            @guest
             <div class="col-8 col-md-6 col-lg-6 row-registro mb-4">
-
               <form class="mt-3" method="post" enctype="multipart/form-data" action="{{ route('register') }}">
                 @csrf
                 <div class="col-lg-5 d-inline-block float-left p-0">
@@ -65,7 +65,12 @@
                 </div>
 
               </form>
+
             </div>
+          @else
+            <br><br><br><br><br><br><br><br><br>
+
+          @endguest
           </div>
         </div>
       </div>
@@ -87,13 +92,18 @@
         Podrás seguir a artistas y a otros usuarios. <br>
         Recibirás notificaciones por email de los shows programados y alertas cuando salen las entradas a la venta, así no te perdés de nada. <br><br>
         Lo mejor de esto, es que es 100% gratis. <br><br>
-        Que esperas! <strong><a href="#">Registrate</a></strong> y deciles a tus amig@s!<br><br>
-        La música nos une.
-        Somos, <em>Sonos!</em>
+        @guest
+          Que esperas! <strong><a href="#">Registrate</a></strong> y deciles a tus amig@s!<br><br>
+          La música nos une.
+          Somos, <em>Sonos!</em>
+
       </p>
       <label>
         <button type="" class="btn my-2" name="button"><a href="/faq" >¿Aún tenés dudas?</a></button>
       </label>
+        @else
+          <br><br><br>
+        @endguest
     </div>
   </section>
 @endsection

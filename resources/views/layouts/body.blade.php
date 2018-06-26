@@ -25,7 +25,7 @@
   @yield('section')
 
   @yield('section2')
-  
+
   <footer>
     @include('layouts.footer')
   </footer>
