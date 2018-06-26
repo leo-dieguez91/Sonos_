@@ -163,3 +163,44 @@ border-radius: 5px;
 #top-button:hover {
   background-color: #61609C;
 }
+/*  bottom top fin*/
+
+/* animacion text */
+.espacio-text{
+  height: 40px;
+  }
+
+.titulos{
+  -webkit-animation-name: text-movido; /* Safari 4.0 - 8.0 */
+   -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+   animation-name: text-movido;
+   animation-duration: 1s;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes text-movido {
+    0%   {font-size: 0.1em;}
+    10%  {font-size: 0.4em;}
+    15%  {font-size: 0.6em;}
+    20%  {font-size: 0.7em;}
+    25%  {font-size: 0.8em;}
+    35%  {font-size: 0.9em;}
+    50%  {font-size: 1.0em;}
+    75%  {font-size: 1.2em;}
+    100% {font-size: 1.4em;}
+}
+
+/* Standard syntax */
+@keyframes text-movido {
+    0%   {font-size: 0.1em;}
+    10%  {font-size: 0.4em;}
+    15%  {font-size: 0.6em;}
+    20%  {font-size: 0.7em;}
+    25%  {font-size: 0.8em;}
+    35%  {font-size: 0.9em;}
+    50%  {font-size: 1.0em;}
+    75%  {font-size: 1.2em;}
+    100% {font-size: 1.4em;}
+}
+
+/* animacion text fin */

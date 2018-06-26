@@ -8,7 +8,11 @@
       <div class="row align-items-center">
         <div class="col-12 mt-3">
           <img src="image/logo.png" alt="logo" class="mt-5" style="width: 100%; max-width: 405px;">
-          <em class="titulos d-none d-sm-block text-dark mb-5">La música nos une</em>
+
+          <div class="espacio-text">
+            <em class="titulos d-none d-sm-block text-dark mb-5">La música nos une</em>
+          </div>
+
           <br><br>
           <div class="row justify-content-center">
             @guest
@@ -68,7 +72,7 @@
 
             </div>
           @else
-            <br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br>
 
           @endguest
           </div>
