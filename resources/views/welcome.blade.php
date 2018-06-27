@@ -19,11 +19,11 @@
             <div class="col-8 col-md-6 col-lg-6 row-registro mb-4">
 
               @if (!auth()->user())
-              <form class="mt-3" method="post" enctype="multipart/form-data" action="{{ route('register') }}">
+              <form id=registerForm class="mt-3" method="post" enctype="multipart/form-data" action="{{ route('register') }}">
                 @csrf
                 <div class="col-lg-5 d-inline-block float-left p-0">
-                  <input class="form-control" type="text" placeholder="Nombre" name="first_name" value="{{ old('first_name') }}">
-                  <label class="errores">
+                  <input class="form-control{{ $errors->has('first_name') ? ' is-invalid' : '' }}" type="text" placeholder="Nombre" name="first_name" value="{{ old('first_name') }}" data-info="'nombre'">
+                  <label class="errores" required>
                     @foreach ($errors->get('first_name') as $error)
                       {{ $error }}
                     @endforeach
@@ -31,7 +31,7 @@
                 </div>
 
                 <div class="col-lg-6 ml-sm-auto d-inline-block float-right p-0">
-                  <input class="form-control" type="text" placeholder="Apellido" name="last_name" value="{{ old('last_name') }}">
+                  <input class="form-control{{ $errors->has('last_name') ? ' is-invalid' : '' }}" type="text" placeholder="Apellido" name="last_name" value="{{ old('last_name') }}" data-info="'apellido'">
                   <label class="errores">
                     @foreach ($errors->get('last_name') as $error)
                       {{ $error }}
@@ -40,7 +40,7 @@
                 </div>
 
                 <div class="">
-                    <input class="form-control" type="text" placeholder="Ingresá tu e-mail" name="email" value="{{ old('email') }}">
+                    <input class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" type="text" placeholder="Ingresá tu e-mail" name="email" value="{{ old('email') }}" data-info="'e-mail'">
                   <label for="email" class="errores">
                     @foreach ($errors->get('email') as $error)
                         {{ $error }}
@@ -49,7 +49,7 @@
                 </div>
 
                 <div class="col-lg-5 ml-sm-auto d-inline-block float-left p-0">
-                  <input class="form-control" type="password" placeholder="Creá tu contraseña" name="password">
+                  <input class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" type="password" placeholder="Creá tu contraseña" name="password" data-info="'contraseña'">
                   <label class="errores">
                     @foreach ($errors->get('password') as $error)
                         {{ $error }}
@@ -58,7 +58,7 @@
                 </div>
 
                 <div class="col-lg-6 ml-sm-auto d-inline-block float-right p-0">
-                  <input id="password-confirm" class="form-control" type="password" placeholder="Confirma tu contraseña" name="password_confirmation">
+                  <input id="password-confirm" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" type="password" placeholder="Confirmá tu contraseña" name="password_confirmation" data-info="'confirmá tu contraseña'">
                   <label class="errores">
                     @foreach ($errors->get('password') as $error)
                       {{ $error }}
@@ -68,15 +68,15 @@
 
                 <div class="col-lg-5 ml-sm-auto d-inline-block float-left p-0">
                   <label for="">
-                    <select id="paises" name='country'>
-                      <option value="">Pais:</option>
+                    <select id="paises" name='country' data-info="'país'">
+                      <option value="">País:</option>
                     </select>
                   </label>
                 </div>
 
                 <div class="col-lg-6 ml-sm-auto d-inline-block float-right p-0">
                   <label for="">
-                    <select id="provincias" name='state'>
+                    <select id="provincias" name='state' data-info="'provincia'">
                       <option value="">Provincias:</option>
                     </select>
                   </label>
@@ -131,6 +131,7 @@
   </section>
 @endsection
 
-@section('sonos')
+@section('section3')
   <script src="js/sonos.js"></script>
+  <script src="js/formValidate.js"></script>
 @endsection
