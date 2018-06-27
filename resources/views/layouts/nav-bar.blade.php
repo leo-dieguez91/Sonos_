@@ -11,7 +11,7 @@
 
               <ul class="navbar-nav mt-2">
                 <li class="nav-item active">
-                  <a class="nav-link decoracion-borde" href="/">Home</a>
+                  <a class="nav-link decoracion-borde" href="/home">Home</a>
                 </li>
                 <li class="nav-item active">
                   <a class="nav-link decoracion-borde" href="/faq">Acerca de Sonos!</a>

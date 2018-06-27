@@ -15,4 +15,6 @@ Route::get('/home', 'PostsController@getPost')->name('home');
 
 Route::post('/home', 'PostsController@savePost')->name('home');
 
+Route::post('/home/delete/{id}', 'PostsController@deletePost');
+
 Route::get('/perfil', 'PerfilController@show');

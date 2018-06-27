@@ -31,4 +31,10 @@ class PostsController extends Controller
     $posts = Post::latest('created_at')->paginate(5);
     return view('home', compact('posts'));
   }
+
+  public function deletePost($id){
+    $delete = Post::find($id);
+    $delete->delete();
+    return redirect('home');
+  }
 }

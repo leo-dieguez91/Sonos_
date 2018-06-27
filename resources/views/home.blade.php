@@ -55,9 +55,14 @@
                         <div class="card-footer">
                           <h6>{{ $post->created_at->format('d/m/Y') . ' a las ' . $post->created_at->format('H:i')}}
                             <ul class="float-right">
-                              <a href="">
-                                <i class="ion-trash-b"></i>
-                              </a>
+                              @if (Auth::user()->id == $post->user_id)
+                                <form action="/home/delete/{{$post->id}}" method="post">
+                                  @csrf
+                                  <button type="submit" name="delete">
+                                    <i class="ion-trash-b"></i>
+                                  </button>
+                                </form>
+                              @endif
                             </ul>
                           </h6>
                         </div>

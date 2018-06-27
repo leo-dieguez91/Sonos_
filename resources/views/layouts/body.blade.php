@@ -30,5 +30,6 @@
     @include('layouts.footer')
   </footer>
 
+  @yield('sonos')
 </body>
 </html>

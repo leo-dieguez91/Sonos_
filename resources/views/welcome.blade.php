@@ -17,7 +17,7 @@
           <div class="row justify-content-center">
             @guest
             <div class="col-8 col-md-6 col-lg-6 row-registro mb-4">
-              
+
               @if (!auth()->user())
               <form class="mt-3" method="post" enctype="multipart/form-data" action="{{ route('register') }}">
                 @csrf
@@ -66,14 +66,30 @@
                   </label>
                 </div>
 
+                <div class="col-lg-5 ml-sm-auto d-inline-block float-left p-0">
+                  <label for="">
+                    <select id="paises" name='country'>
+                      <option value="">Pais:</option>
+                    </select>
+                  </label>
+                </div>
+
+                <div class="col-lg-6 ml-sm-auto d-inline-block float-right p-0">
+                  <label for="">
+                    <select id="provincias" name='state'>
+                      <option value="">Provincias:</option>
+                    </select>
+                  </label>
+                </div>
+
                 <div class="form-group">
-                  <button class="btn my-2" type="submit" name="register">Registrarme</button>
+                  <button class="btn my-2 mx-auto" type="submit" name="register">Registrarme</button>
                 </div>
 
               </form>
             @endif
 
-            </div>
+          </div>
           @else
             <br><br><br><br><br><br><br><br><br><br>
 
@@ -113,4 +129,8 @@
         @endguest
     </div>
   </section>
+@endsection
+
+@section('sonos')
+  <script src="js/sonos.js"></script>
 @endsection
