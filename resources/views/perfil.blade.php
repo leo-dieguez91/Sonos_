@@ -10,7 +10,7 @@
 
       <br><br>
 
-      <strong>{{ Auth::user()->first_name}} {{ Auth::user()->first_name}}</strong>
+      <strong>{{ Auth::user()->first_name}} {{ Auth::user()->last_name}}</strong>
       </div>
 
     </div>

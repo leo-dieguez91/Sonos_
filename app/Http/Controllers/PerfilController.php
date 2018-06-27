@@ -10,4 +10,8 @@ class PerfilController extends Controller
   {
     return view('perfil');
   }
+
+  public function replaceImage(){
+    
+  }
 }
