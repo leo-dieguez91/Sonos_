@@ -1,9 +1,14 @@
 var selectPaises = document.querySelector('#paises');
+
 var selectProvincias = document.querySelector('#provincias');
+
 selectProvincias.style.display = 'block';
+
 var urlPaises = 'http://pilote.techo.org/?do=api.getPaises';
 var urlProvincias = 'http://pilote.techo.org/?do=api.getRegiones?idPais=';
+
 pedidoAjax(urlPaises, cargarPaises);
+
 function pedidoAjax (url, laFuncion) {
 	fetch(url)
 	.then(function (response) {
@@ -17,6 +22,7 @@ function pedidoAjax (url, laFuncion) {
 		console.error(`ERROR: ${error}`);
 	});
 }
+
 function cargarPaises (paises) {
 	for (var n in paises) {
 		var option = `<option value="${paises[n]}"> ${n} </option>`;
@@ -44,17 +50,3 @@ function cargarPaises (paises) {
 		}
 	};
 }
-
-// var formulario = document.querySelector('form');
-// console.log(formulario);
-//
-// var elements = formulario.elements
-//
-// formulario.addEventListener('submit', function(e){
-// 	[...elements].forEach(function(element){
-// 		if (element.value.length === 0 && element.nodeName != 'BUTTON'){
-// 			e.preventDefault();
-// 			alert(`El campo ${element.getAttribute('data-info')} es obligatorio`);
-// 		}
-// 	});
-// });

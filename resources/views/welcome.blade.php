@@ -132,6 +132,6 @@
 @endsection
 
 @section('section3')
-  <script src="js/sonos.js"></script>
+  <script src="js/welcome.js"></script>
   <script src="js/formValidate.js"></script>
 @endsection
