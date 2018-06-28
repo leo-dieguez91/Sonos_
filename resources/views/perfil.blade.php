@@ -1,7 +1,7 @@
 @extends('layouts.body')
 
 @section('section')
-  <div class="container margin-nav">
+  <div class="container margin-nav" style="padding-bottom: 40px; padding-top: 40px;">
     <div class="row justify-content-center">
       <div>
         <img src="<?= Auth::user()->picture == '../image/avatar_default.png' ? Auth::user()->picture : 'storage/avatar/' . Auth::user()->picture ?>" alt="avatar" class="rounded-circle" width="200" height="200">

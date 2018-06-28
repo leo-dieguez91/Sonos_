@@ -37,4 +37,6 @@ class PerfilController extends Controller
     return redirect('perfil');
 
   }
+
+  // validar imagen a subir, fijarme porque no carga bien las imagenes
 }

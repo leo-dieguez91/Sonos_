@@ -68,7 +68,7 @@
 
                 <div class="col-lg-5 ml-sm-auto d-inline-block float-left p-0">
                   <label for="">
-                    <select id="paises" name='country' data-info="'país'">
+                    <select class="form-control" id="paises" name='country' data-info="'país'">
                       <option value="">País:</option>
                     </select>
                   </label>
@@ -76,7 +76,7 @@
 
                 <div class="col-lg-6 ml-sm-auto d-inline-block float-right p-0">
                   <label for="">
-                    <select id="provincias" name='state' data-info="'provincia'">
+                    <select class="form-control" id="provincias" name='state' data-info="'provincia'">
                       <option value="">Provincias:</option>
                     </select>
                   </label>
@@ -102,80 +102,7 @@
 @endsection
 
 @section('section2')
-
-
-
-  <div class="container">
-      <div class="row justify-content-center" style="padding-bottom: 40px; padding-top: 40px;">
-
-          <div class="col-lg-1"></div>
-          <div class="col-lg-12 col-xs-12 col-sm-12">
-              <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-
-                  <div class="carousel-inner">
-                      <div class="carousel-item active">
-                          <div class="row">
-                              <div class="col-lg-4 col-xs-4 col-sm-4">
-                                  <img class="d-block w-100" src="image/fondo-recital3.jpg"alt="First slide" >
-                              </div>
-                              <div class="col-lg-4 col-xs-4 col-sm-4">
-                                  <img class="d-block w-100" src="image/logo.png" alt="First slide">
-                              </div>
-                              <div class="col-lg-4 col-xs-4 col-sm-4">
-                                  <img class="d-block w-100" src="image/logo.png" alt="First slide">
-                              </div>
-
-                            </div>
-                      </div>
-
-                      <div class="carousel-item">
-                          <div class="row">
-                              <div class="col-lg-4 col-xs-4 col-sm-4">
-                                  <img class="d-block w-100" src="http://www.hotel-erfoud-riad.com/images/resized/images/hrm/activites/desert-erfoud_1400_600.jpg" alt="Two slide">
-                              </div>
-                              <div class="col-lg-4 col-xs-4 col-sm-4">
-                                  <img class="d-block w-100" src="image/fondo-recital2.jpg" alt="Two slide">
-                              </div>
-                              <div class="col-lg-4 col-xs-4 col-sm-4">
-                                  <img class="d-block w-100" src="http://www.hotel-erfoud-riad.com/images/resized/images/hrm/activites/desert-erfoud_1400_600.jpg" alt="Two slide">
-                              </div>
-
-                          </div>
-                      </div>
-
-                      <div class="carousel-item">
-                          <div class="row">
-                              <div class="col-lg-4 col-xs-4 col-sm-4">
-                                  <img class="d-block w-100" src="https://www.themepunch.com/home/wp-content/uploads/2014/07/unlimited_height_5.jpg" alt="Three slide">
-                              </div>
-                              <div class="col-lg-4 col-xs-4 col-sm-4">
-                                  <img class="d-block w-100" src="image/fondo-recital.png" alt="Three slide">
-                              </div>
-                              <div class="col-lg-4 col-xs-4 col-sm-4">
-                                  <img class="d-block w-100" src="https://www.themepunch.com/home/wp-content/uploads/2014/07/unlimited_height_5.jpg" alt="Three slide">
-                              </div>
-
-                          </div>
-                      </div>
-
-                  </div>
-                  <div>
-                    <a class="carousel-control-prev mr-5" href="#carouselExampleControls" role="button" data-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Previous</span>
-                    </a>
-                </div>
-                  <div>
-                  <a class="carousel-control-next ml-5" href="#carouselExampleControls" role="button" data-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Next</span>
-                  </a>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-
+  
   <!--  Quienes Somos -->
   <section class="container-fluid border fondoNeutro justify-content-center align-items-center" id="QuienesSomos">
 
