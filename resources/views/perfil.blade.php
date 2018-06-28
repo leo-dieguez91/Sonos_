@@ -57,9 +57,11 @@
             <div class="col-sm-4">
               <div class="form-group">
                 <label class="control-label">Cambiar contraseña:</label>
-                <input class="form-control" type="password" name="password" value="">
-                <label>
-
+                <input class="form-control{{ $errors->has('password') ? ' invalid-input' : '' }}" type="password" name="password" value="">
+                <label class="errores">
+                  @foreach ($errors->get('password') as $error)
+                      {{ $error }}
+                  @endforeach
                 </label>
               </div>
             </div>
@@ -67,8 +69,11 @@
             <div class="col-sm-4">
               <div class="form-group">
                 <label class="control-label">Confirmar cambios:</label>
-                <input class="form-control" type="password" name="confirmPassword" placeholder="Contraseña">
-                <label>
+                <input class="form-control{{ $errors->has('password') ? ' invalid-input' : '' }}" type="password" name="password_confirmation" placeholder="Contraseña">
+                <label class="errores">
+                  @foreach ($errors->get('password') as $error)
+                    {{ $error }}
+                  @endforeach
                 </label>
               </div>
             </div>

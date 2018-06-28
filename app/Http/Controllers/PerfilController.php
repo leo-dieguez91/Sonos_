@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class PerfilController extends Controller
 {
@@ -22,7 +23,7 @@ class PerfilController extends Controller
       'last_name' => 'sometimes|nullable|string|max:100',
       'email' => 'sometimes|nullable|string|email|max:150|unique:users',
       'avatar' => 'sometimes|nullable|image|mimes:jpeg,bmp,png,jpg',
-      'password' => 'string|min:6|confirmed',
+      'password' => 'sometimes|nullable|string|min:6|confirmed',
       // 'confirmPassword' => 'strin|min:6'
     ]);
 
