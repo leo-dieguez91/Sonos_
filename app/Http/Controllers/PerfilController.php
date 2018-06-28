@@ -14,14 +14,26 @@ class PerfilController extends Controller
   public function replaceUserData(Request $request){
     $request = request();
     $user = $request->user();
-    $file = $request->file('avatar');
-    $folder = "avatar";
-    $name = $user->email . '.' . $file->extension();
-    $path = $file->storePubliclyAs($folder, $name, 'public');
+    if ($request->avatar) {
+      $file = $request->file('avatar');
+      $folder = "avatar";
+      $name = $user->email . '.' . $file->extension();
+      $path = $file->storePubliclyAs($folder, $name, 'public');
 
-    $user->picture = $name;
+      $user->picture = $name;
+    }
+    if (trim($request->first_name)) {
+      $user->first_name = $request->first_name;
+    }
+    if (trim($request->last_name)) {
+      $user->last_name = $request->last_name;
+    }
+    if (trim($request->email)) {
+      $user->email = $request->email;
+    }
+
+
     $user->save();
-
     return redirect('perfil');
 
   }
