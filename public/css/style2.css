@@ -3,8 +3,7 @@
 }
 
 body{
-
-  background-color: #FFFFFF;
+  background-color: #F5F5F5;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 20px;
   margin: auto;
@@ -24,45 +23,40 @@ ul, ol{
 }
 
 .header-main{
-  background-color: #FFFFFF;
+  background-color: #e7e7e7;
+}
 
+.footer-main{
+  background-color: #e7e7e7;
+  color: black;
 }
 
 .portada-inicial{
-  background-image: url(../image/fondo-recital4.png);
+  background-image: url(../image/fondo-recital-BN.png);
   background-position-x: center;
   background-position-y: center;
   background-size: cover;
   height: auto;
-  width: 100% ;
+  width: auto;
   text-align: center;
   margin-top: 65px;
 }
 
-.subiTuFoto{
-  color: #FFFFFF;
-  background-color: white;
-  border-radius: 5px;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-  border: solid 1px #4e4e4e;
-  font-size: 0.9em;
-}
-
 .errores{
   color:white;
-  background-color: #d9534f;
-  opacity: 0.9;
-  border-radius: 5px;
+  background-color: #61aca9;
+  opacity: 1;
+  border-radius: 1px;
+  font-weight: bold;
   font-size: 0.6em;
   padding-left: 0.4em;
   padding-right: 0.4em;
 }
 
-.errores2{
-  color:#d9534f;
-  font-size: 0.6em;
-  margin-top: 1em;
+.invalid-input{
+  border-color: #61aca9;
+  box-shadow: 0 0 3rem #61aca9;
+  border-width:thick;
 }
 
 .centered-form{
@@ -75,17 +69,26 @@ ul, ol{
 }
 
 .btn{
-  border: 1px solid #000000c2;
-}
-
-button{
-  background-color: #7170b5;
-  font-size:bold;
+  border: 1px solid #000000;
+  background-color: #8faaa9;
   box-shadow: 1px 1px #292929;
-
+  font-size:bold;
 }
+
+.btn2{
+  border: 1px solid #000000c2;
+  background-color: #8faaa9;
+  box-shadow: 1px 1px #292929;
+  font-size:bold;
+  color: #007b5e;
+}
+
+.btn2:hover{
+  background-color: #c3d5d4;
+}
+
 button:hover{
-  background-color: #5e5e8f;
+  background-color: #c3d5d4;
 }
 
 .boton-distinto{
@@ -122,9 +125,9 @@ header .form-control{
 }
 
 .row-registro{
-background-color: rgba(8, 28, 112, 0.19);
-border: 2px solid rgba(13, 8, 112, 0.33);
-border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.19);
+  border: 2px solid rgba(0, 0, 0, 0.57);
+  border-radius: 5px;
 }
 
 
@@ -153,7 +156,7 @@ border-radius: 5px;
   font-size: 18px;
   border: none;
   outline: none;
-  background-color: #0f134679;
+  background-color: #8faaa9;
   color: white;
   cursor: pointer;
   padding: 15px;
@@ -161,7 +164,7 @@ border-radius: 5px;
 }
 
 #top-button:hover {
-  background-color: #61609C;
+  background-color: #c3d5d4;
 }
 /*  bottom top fin*/
 

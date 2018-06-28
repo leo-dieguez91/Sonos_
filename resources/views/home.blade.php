@@ -57,7 +57,7 @@
                               @if (Auth::user()->id == $post->user_id)
                                 <form action="/home/delete/{{$post->id}}" method="post" id="delete" onsubmit="return confirm('Seguro deseas continuar?');">
                                   @csrf
-                                  <button type="submit" name="delete">
+                                  <button class="btn" type="submit" name="delete">
                                     <i class="ion-trash-b"></i>
                                   </button>
                                 </form>

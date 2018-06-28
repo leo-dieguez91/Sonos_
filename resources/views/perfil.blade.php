@@ -77,8 +77,8 @@
 @endsection
 
 @section('section2')
-  <button type="button" name="button" id="sonosA">Tema 1</button>
-   <button type="button" name="button" id="sonosB">Tema 2</button>
+  <button class="btn1" type="button" name="button" id="sonosA">Tema 1</button>
+   <button class="btn2" type="button" name="button" id="sonosB">Tema 2</button>
 @endsection
 
 @section('section3')
@@ -87,21 +87,21 @@
  <script>
    $('#sonosA').click(function() {
      var linkCSS = document.querySelector('#theme');
-     linkCSS.setAttribute('href', '/css/style2.css');
-     $.ajax({
-         type: 'POST',
-         url: 'setCookie.php',
-         data: { cookie: '/css/style2.css' },
-     });
-   });
-
-   $('#sonosB').click(function() {
-     var linkCSS = document.querySelector('#theme');
      linkCSS.setAttribute('href', '/css/style.css');
      $.ajax({
          type: 'POST',
          url: 'setCookie.php',
          data: { cookie: '/css/style.css' },
+     });
+   });
+
+   $('#sonosB').click(function() {
+     var linkCSS = document.querySelector('#theme');
+     linkCSS.setAttribute('href', '/css/style2.css');
+     $.ajax({
+         type: 'POST',
+         url: 'setCookie.php',
+         data: { cookie: '/css/style2.css' },
      });
    });
  </script>

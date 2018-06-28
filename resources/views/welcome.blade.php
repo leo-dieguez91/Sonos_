@@ -22,7 +22,7 @@
               <form id=registerForm class="mt-3" method="post" enctype="multipart/form-data" action="{{ route('register') }}">
                 @csrf
                 <div class="col-lg-5 d-inline-block float-left p-0">
-                  <input class="form-control{{ $errors->has('first_name') ? ' is-invalid' : '' }}" type="text" placeholder="Nombre" name="first_name" value="{{ old('first_name') }}" data-info="'nombre'">
+                  <input class="form-control{{ $errors->has('first_name') ? ' invalid-input' : '' }}" type="text" placeholder="Nombre" name="first_name" value="{{ old('first_name') }}" data-info="'nombre'">
                   <label class="errores" required>
                     @foreach ($errors->get('first_name') as $error)
                       {{ $error }}
@@ -31,7 +31,7 @@
                 </div>
 
                 <div class="col-lg-6 ml-sm-auto d-inline-block float-right p-0">
-                  <input class="form-control{{ $errors->has('last_name') ? ' is-invalid' : '' }}" type="text" placeholder="Apellido" name="last_name" value="{{ old('last_name') }}" data-info="'apellido'">
+                  <input class="form-control{{ $errors->has('last_name') ? ' invalid-input' : '' }}" type="text" placeholder="Apellido" name="last_name" value="{{ old('last_name') }}" data-info="'apellido'">
                   <label class="errores">
                     @foreach ($errors->get('last_name') as $error)
                       {{ $error }}
@@ -40,7 +40,7 @@
                 </div>
 
                 <div class="">
-                    <input class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" type="text" placeholder="Ingresá tu e-mail" name="email" value="{{ old('email') }}" data-info="'e-mail'">
+                    <input class="form-control{{ $errors->has('email') ? ' invalid-input' : '' }}" type="text" placeholder="Ingresá tu e-mail" name="email" value="{{ old('email') }}" data-info="'e-mail'">
                   <label for="email" class="errores">
                     @foreach ($errors->get('email') as $error)
                         {{ $error }}
@@ -49,7 +49,7 @@
                 </div>
 
                 <div class="col-lg-5 ml-sm-auto d-inline-block float-left p-0">
-                  <input class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" type="password" placeholder="Creá tu contraseña" name="password" data-info="'contraseña'">
+                  <input class="form-control{{ $errors->has('password') ? ' invalid-input' : '' }}" type="password" placeholder="Creá tu contraseña" name="password" data-info="'contraseña'">
                   <label class="errores">
                     @foreach ($errors->get('password') as $error)
                         {{ $error }}
@@ -58,7 +58,7 @@
                 </div>
 
                 <div class="col-lg-6 ml-sm-auto d-inline-block float-right p-0">
-                  <input id="password-confirm" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" type="password" placeholder="Confirmá tu contraseña" name="password_confirmation" data-info="'confirmá tu contraseña'">
+                  <input id="password-confirm" class="form-control{{ $errors->has('password') ? ' invalid-input' : '' }}" type="password" placeholder="Confirmá tu contraseña" name="password_confirmation" data-info="'confirmá tu contraseña'">
                   <label class="errores">
                     @foreach ($errors->get('password') as $error)
                       {{ $error }}
@@ -102,7 +102,7 @@
 @endsection
 
 @section('section2')
-  
+
   <!--  Quienes Somos -->
   <section class="container-fluid border fondoNeutro justify-content-center align-items-center" id="QuienesSomos">
 

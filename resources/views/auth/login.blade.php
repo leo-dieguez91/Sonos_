@@ -18,14 +18,14 @@
 
               <form class="my-5" method="POST" enctype="multipart/form-data" action="{{ route('login') }}">
                 @csrf
-                <input class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" id="email" type="email" placeholder="Ingresá tu e-mail" name="email" value="{{ old('email') }}" data-info="'e-mail'">
+                <input class="form-control{{ $errors->has('email') ? ' invalid-input' : '' }}" id="email" type="email" placeholder="Ingresá tu e-mail" name="email" value="{{ old('email') }}" data-info="'e-mail'">
                 <label for="email" class="errores">
                   @foreach ($errors->get('email') as $error)
                     {{ $error }}
                   @endforeach
                 </label>
 
-                <input id="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" type="password" placeholder="Ingresá tu contraseña" name="password" data-info="'contraseña'">
+                <input id="password" class="form-control{{ $errors->has('password') ? ' invalid-input' : '' }}" type="password" placeholder="Ingresá tu contraseña" name="password" data-info="'contraseña'">
                 <label class="errores">
                   @foreach ($errors->get('password') as $error)
                     {{ $error }}

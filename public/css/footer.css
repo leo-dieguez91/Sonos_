@@ -7,19 +7,18 @@ section .section-title {
     margin-bottom: 50px;
     text-transform: uppercase;
 }
-#footer {
-    background: #5e5e8f !important;
 
-}
+/* #footer {
+    background: #5e5e8f !important;
+} */
+
 #footer h5{
 	padding-left: 10px;
-    border-left: 3px solid #eeeeee;
+    border-left: 3px solid black;
     padding-bottom: 6px;
     margin-bottom: 20px;
-    color:#ffffff;
 }
 #footer a {
-    color: #ffffff;
     text-decoration: none !important;
     background-color: transparent;
     -webkit-text-decoration-skip: objects;

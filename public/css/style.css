@@ -25,7 +25,10 @@ ul, ol{
 
 .header-main{
   background-color: #61609C;
+}
 
+.footer-main{
+  background-color: #61609C;
 }
 
 .portada-inicial{
@@ -51,12 +54,19 @@ ul, ol{
 
 .errores{
   color:white;
-  background-color: #d9534f;
-  opacity: 0.9;
-  border-radius: 5px;
+  background-color: #dc3545;
+  opacity: 0.85;
+  border-radius: 1px;
+  font-weight: bold;
   font-size: 0.6em;
   padding-left: 0.4em;
   padding-right: 0.4em;
+}
+
+.invalid-input{
+  border-color: #dc3545;
+  box-shadow: 0 0 2rem #dc3545;
+  border-width:medium;
 }
 
 .errores2{
@@ -76,14 +86,24 @@ ul, ol{
 
 .btn{
   border: 1px solid #000000c2;
+  background-color: #7170b5;
+  font-size:bold;
+  box-shadow: 1px 1px #292929;
 }
 
+.btn1{
+  border: 1px solid #000000c2;
+  background-color: #7170b5;
+  font-size:bold;
+  box-shadow: 1px 1px #292929;
+}
+/*
 button{
   background-color: #7170b5;
   font-size:bold;
   box-shadow: 1px 1px #292929;
 
-}
+} */
 button:hover{
   background-color: #5e5e8f;
 }

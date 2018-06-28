@@ -1,4 +1,4 @@
-<section id="footer">
+<footer class="footer-main" id="footer">
 <div class="container footer-section">
   <div class="row text-center text-xs-center text-sm-left">
     <div class="col-xs-12 col-sm-3">
@@ -35,7 +35,7 @@
   </div>
 
 </div>
-</section>
+</footer>
 
 </body>
 </html>
