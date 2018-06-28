@@ -42,7 +42,7 @@
                       <div class="card">
                         <div class="card-header">
                           <div class="pull-left image">
-                            <img src="image/avatar_default.png" alt="avatar" class="rounded-circle" width="40" height="40">
+                            <img src="<?= Auth::user()->picture == '../image/avatar_default.png' ? Auth::user()->picture : 'storage/avatar/' . Auth::user()->picture ?>" alt="avatar" class="rounded-circle" width="40" height="40">
                           </div>
                           <h5 class="mt-2 ml-5">
                             {{$post->user->first_name . ' ' . $post->user->last_name}} dice:
@@ -55,7 +55,7 @@
                           <h6>{{ $post->created_at->format('d/m/Y') . ' a las ' . $post->created_at->format('H:i')}}
                             <ul class="float-right">
                               @if (Auth::user()->id == $post->user_id)
-                                <form action="/home/delete/{{$post->id}}" method="post">
+                                <form action="/home/delete/{{$post->id}}" method="post" id="delete" onsubmit="return confirm('Seguro deseas continuar?');">
                                   @csrf
                                   <button type="submit" name="delete">
                                     <i class="ion-trash-b"></i>
@@ -82,4 +82,7 @@
   </div>
 
 
+@endsection
+@section('section3')
+  <script src="js/confirmDelete.js"></script>
 @endsection

@@ -1,5 +1,4 @@
 var formulario = document.querySelector('form');
-console.log(formulario);
 
 var elements = formulario.elements
 
