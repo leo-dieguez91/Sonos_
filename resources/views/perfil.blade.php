@@ -75,3 +75,34 @@
     </div>
   </div>
 @endsection
+
+@section('section2')
+  <button type="button" name="button" id="sonosA">Tema 1</button>
+   <button type="button" name="button" id="sonosB">Tema 2</button>
+@endsection
+
+@section('section3')
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+ <script>
+   $('#sonosA').click(function() {
+     var linkCSS = document.querySelector('#theme');
+     linkCSS.setAttribute('href', '/css/style2.css');
+     $.ajax({
+         type: 'POST',
+         url: 'setCookie.php',
+         data: { cookie: '/css/style2.css' },
+     });
+   });
+
+   $('#sonosB').click(function() {
+     var linkCSS = document.querySelector('#theme');
+     linkCSS.setAttribute('href', '/css/style.css');
+     $.ajax({
+         type: 'POST',
+         url: 'setCookie.php',
+         data: { cookie: '/css/style.css' },
+     });
+   });
+ </script>
+@endsection

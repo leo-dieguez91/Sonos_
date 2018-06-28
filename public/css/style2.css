@@ -1,0 +1,206 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+
+  background-color: #FFFFFF;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+  margin: auto;
+}
+
+a{
+  text-decoration:none !important;
+  margin: 0;
+  padding: 0;
+  color: black;
+  }
+
+ul, ol{
+      margin: 0;
+      padding: 0;
+      list-style: none; /* elimina los puntos de la lista*/
+}
+
+.header-main{
+  background-color: #FFFFFF;
+
+}
+
+.portada-inicial{
+  background-image: url(../image/fondo-recital4.png);
+  background-position-x: center;
+  background-position-y: center;
+  background-size: cover;
+  height: auto;
+  width: 100% ;
+  text-align: center;
+  margin-top: 65px;
+}
+
+.subiTuFoto{
+  color: #FFFFFF;
+  background-color: white;
+  border-radius: 5px;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  border: solid 1px #4e4e4e;
+  font-size: 0.9em;
+}
+
+.errores{
+  color:white;
+  background-color: #d9534f;
+  opacity: 0.9;
+  border-radius: 5px;
+  font-size: 0.6em;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+}
+
+.errores2{
+  color:#d9534f;
+  font-size: 0.6em;
+  margin-top: 1em;
+}
+
+.centered-form{
+	margin-top: 10px;
+}
+
+.centered-form .panel{
+	background: rgba(255, 255, 255, 0.8);
+	box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+}
+
+.btn{
+  border: 1px solid #000000c2;
+}
+
+button{
+  background-color: #7170b5;
+  font-size:bold;
+  box-shadow: 1px 1px #292929;
+
+}
+button:hover{
+  background-color: #5e5e8f;
+}
+
+.boton-distinto{
+
+                background: rgba(26, 56, 5, 0);
+                color: white;
+                font-weight: bold;
+                border: none;
+                border-radius:0 ;
+                border-right: solid 1px #828282;
+
+}
+
+.espacio-barra{
+          margin-left: 100px;
+  }
+
+header .form-control{
+        padding: 0;
+        font-size: 0.8em;
+        height: 20px;
+        width: 50px;
+}
+
+.ajusteleft{
+        margin-left: 17%;
+}
+
+.form-check a{
+      font-size: 0.7em;
+      text-decoration: none;
+      color: black;
+
+}
+
+.row-registro{
+background-color: rgba(8, 28, 112, 0.19);
+border: 2px solid rgba(13, 8, 112, 0.33);
+border-radius: 5px;
+}
+
+
+.titulos{
+
+  /* font-family: 'Source Sans Pro', sans-serif; */
+  /* font-family: 'Itim', cursive;
+  font-family: 'Calligraffitti', cursive;
+  font-family: 'Homemade Apple', cursive; */
+  font-family: 'Caveat Brush', cursive;
+  font-size: 1.4em;
+}
+
+/* input registro */
+
+
+/* input registro fin */
+/* bottom top */
+
+#top-button {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #0f134679;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 1000px;
+}
+
+#top-button:hover {
+  background-color: #61609C;
+}
+/*  bottom top fin*/
+
+/* animacion text */
+.espacio-text{
+  height: 40px;
+  }
+
+.titulos{
+  -webkit-animation-name: text-movido; /* Safari 4.0 - 8.0 */
+   -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+   animation-name: text-movido;
+   animation-duration: 1s;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes text-movido {
+    0%   {font-size: 0.1em;}
+    10%  {font-size: 0.4em;}
+    15%  {font-size: 0.6em;}
+    20%  {font-size: 0.7em;}
+    25%  {font-size: 0.8em;}
+    35%  {font-size: 0.9em;}
+    50%  {font-size: 1.0em;}
+    75%  {font-size: 1.2em;}
+    100% {font-size: 1.4em;}
+}
+
+/* Standard syntax */
+@keyframes text-movido {
+    0%   {font-size: 0.1em;}
+    10%  {font-size: 0.4em;}
+    15%  {font-size: 0.6em;}
+    20%  {font-size: 0.7em;}
+    25%  {font-size: 0.8em;}
+    35%  {font-size: 0.9em;}
+    50%  {font-size: 1.0em;}
+    75%  {font-size: 1.2em;}
+    100% {font-size: 1.4em;}
+}
+
+/* animacion text fin */
