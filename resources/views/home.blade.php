@@ -8,7 +8,6 @@
       <div class="col-12 mt-3">
         <div class="row justify-content-center">
 
-
           {{-- Formulario de posteo --}}
           <div class="col-8 col-md-6 col-lg-6 row-registro mb-4">
             <form class="mt-3" method="post" enctype="multipart/form-data">

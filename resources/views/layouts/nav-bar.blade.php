@@ -20,7 +20,7 @@
                   <a class="nav-link decoracion-borde" href="/#QuienesSomos">Quienes Somos</a>
                 </li>
                 <li class="nav-item active">
-                  <a class="nav-link" href="#">Calendario</a>
+                  <a class="nav-link" href="/eventos">Eventos</a>
                 </li>
               </ul>
 
@@ -84,6 +84,11 @@
             </div>
           </form> --}}
             {{-- col-10 col-sm-9 col-md-8 col-lg-8 --}}
+
+            <div class="p-0 mt-2 mx-5">
+              <button type="button" class="btn btn-sm ml-1 pl-2 pr-2 float-right" name="button"><a href="/"><span class="ion-log-in"></span> Registrate!</a></button>
+            </div>
+
           <div class="p-0 mt-2 mx-5">
             <button type="button" class="btn btn-sm ml-1 pl-2 pr-2 float-right" name="button"><a href="{{ route('login') }}"><span class="ion-log-in"></span> Ingresar</a></button>
           </div>
@@ -92,11 +97,15 @@
           <div class="btn-group mb-1 mt-1 pull-right pr-3">
             <button type="button" class="btn dropdown-nav mr-2" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false"style="width: 100%; height:55px;">
-              <div class="col-md-6 d-inline text-left">
-                  {{ Auth::user()->first_name}} {{Auth::user()->last_name }}
+              <div class="col-md-6 d-inline text-left"> Hola
+                  {{ Auth::user()->first_name}} !
+                  {{-- {{Auth::user()->last_name }} --}}
               </div>
+
+
+
               <div class="col-md-4 d-inline">
-                <img src="{{ Auth::user()->picture}}" alt="avatar" class="rounded-circle" width="40" height="40">
+                <img src="<?= Auth::user()->picture == '../image/avatar_default.png' ? Auth::user()->picture : 'storage/avatar/' . Auth::user()->picture ?>" alt="avatar" class="rounded-circle" width="40" height="40">
               </div>
             </button>
             <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">

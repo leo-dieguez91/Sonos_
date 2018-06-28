@@ -4,6 +4,7 @@
   <meta name="viewport" content="width=device-whidt, initial-scale=1">
   <meta charset="utf-8">
   <title>@yield('title')</title>
+  <link rel="shortcut icon" href="image/claveSol.png">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"> </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>

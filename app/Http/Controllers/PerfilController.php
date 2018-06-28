@@ -11,7 +11,18 @@ class PerfilController extends Controller
     return view('perfil');
   }
 
-  public function replaceImage(){
-    
+  public function replaceUserData(Request $request){
+    $request = request();
+    $user = $request->user();
+    $file = $request->file('avatar');
+    $folder = "avatar";
+    $name = $user->email . '.' . $file->extension();
+    $path = $file->storePubliclyAs($folder, $name, 'public');
+
+    $user->picture = $name;
+    $user->save();
+
+    return redirect('perfil');
+
   }
 }
