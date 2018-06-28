@@ -33,16 +33,22 @@
             <div class="col-sm-4">
               <div class="form-group d-inline">
                 <label class="control-label">Email: {{ Auth::user()->email}}</label>
-                <input class="form-control" type="text" name="email" value="" placeholder="Email">
-                <label>
+                <input class="form-control{{ $errors->has('email') ? ' invalid-input' : '' }}" type="text" name="email" value="" placeholder="Email">
+                <label class="errores" required>
+                  @foreach ($errors->get('email') as $error)
+                    {{ $error }}
+                  @endforeach
                 </label>
               </div>
             </div>
             <div class="col-sm-4">
               <div class="form-group d-inline">
                 <label for="name" class="control-label">Cambiar imagen:</label>
-                <input class="form-control" type="file" name="avatar" value="">
-                <label>
+                <input class="form-control{{ $errors->has('avatar') ? ' invalid-input' : '' }}" type="file" name="avatar" value="">
+                <label class="errores" required>
+                  @foreach ($errors->get('avatar') as $error)
+                    {{ $error }}
+                  @endforeach
                 </label>
               </div>
             </div>

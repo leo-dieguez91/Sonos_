@@ -42,7 +42,7 @@
                       <div class="card">
                         <div class="card-header">
                           <div class="pull-left image">
-                            <img src="<?= Auth::user()->picture == '../image/avatar_default.png' ? Auth::user()->picture : 'storage/avatar/' . Auth::user()->picture ?>" alt="avatar" class="rounded-circle" width="40" height="40">
+                            <img src="<?= $post->user->picture == '../image/avatar_default.png' ? $post->user->picture : 'storage/avatar/' . $post->user->picture ?>" alt="avatar" class="rounded-circle" width="40" height="40">
                           </div>
                           <h5 class="mt-2 ml-5">
                             {{$post->user->first_name . ' ' . $post->user->last_name}} dice:
