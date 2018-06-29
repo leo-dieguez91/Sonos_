@@ -16,34 +16,11 @@
               <button class="btn my-2 pull-right" type="submit" name="newPost">Post</button>
               <ul class="float-left mt-3 mx-2">
 
+                <label class="btn-btn-default btn-image">
+                  <i class="ion-android-image"></i>
+                  <input id='2' onclick="do2()" class="form-control{{ $errors->has('picture') ? ' invalid-input' : '' }}" type="file" style="display:none;" name="picture" aria-hidden="true">
+                </label>
 
-
-
-                <label class="btn-btn-default">
-                  <i id='1' class="ion-android-image"></i>
-                    <input id='2' onclick="do2()" class="form-control{{ $errors->has('picture') ? ' invalid-input' : '' }}" type="file" style="display:none;" name="picture" aria-hidden="true">
-              </label>
-{{--
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <label class="btn-btn-default">
-                            <i id="1" onclick="do2()" class="fa fa-upload fa-2x" aria-hidden="true"></i>Upload Document
-                            <input id="2" style="display:none;"type="file" class="form-control col-lg-2 col-md-2 col-sm-2 ">
-                        </label>
-                    </div> --}}
-
-
-
-
-              </ul>
-              <ul class="float-left mt-3 mx-2">
-                <a href="#">
-                  <i class="ion-android-film"></i>
-                </a>
-              </ul>
-              <ul class="float-left mt-3 mx-2">
-                <a href="#">
-                  <i class="ion-link"></i>
-                </a>
               </ul>
             </form>
           </div>
@@ -76,9 +53,11 @@
                               @if (Auth::user()->id == $post->user_id)
                                 <form action="/home/delete/{{$post->id}}" method="post" id="delete" onsubmit="return confirm('Seguro deseas continuar?');">
                                   @csrf
-                                  <button class="btn" type="submit" name="delete">
+                                  <label class="btn-btn-default btn-trash">
                                     <i class="ion-trash-b"></i>
-                                  </button>
+                                    <button id='3' onclick="do3()" class="form-control{{ $errors->has('picture') ? ' invalid-input' : '' }}" type="submit" style="display:none;" name="delete" aria-hidden="true">
+                                    </button>
+                                  </label>
                                 </form>
                               @endif
                             </ul>
@@ -108,27 +87,30 @@
   public function do2(){
     document.getElementById("2").click;
   }
+  public function do3(){
+    document.getElementById("3").click;
+  }
   </script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-   <script>
-     $('#sonosA').click(function() {
-       var linkCSS = document.querySelector('#theme');
-       linkCSS.setAttribute('href', '/css/style.css');
-       $.ajax({
-           type: 'POST',
-           url: 'setCookie.php',
-           data: { cookie: '/css/style.css' },
-       });
-     });
+  <script>
+  $('#sonosA').click(function() {
+    var linkCSS = document.querySelector('#theme');
+    linkCSS.setAttribute('href', '/css/style.css');
+    $.ajax({
+      type: 'POST',
+      url: 'setCookie.php',
+      data: { cookie: '/css/style.css' },
+    });
+  });
 
-     $('#sonosB').click(function() {
-       var linkCSS = document.querySelector('#theme');
-       linkCSS.setAttribute('href', '/css/style2.css');
-       $.ajax({
-           type: 'POST',
-           url: 'setCookie.php',
-           data: { cookie: '/css/style2.css' },
-       });
-     });
-   </script>
+  $('#sonosB').click(function() {
+    var linkCSS = document.querySelector('#theme');
+    linkCSS.setAttribute('href', '/css/style2.css');
+    $.ajax({
+      type: 'POST',
+      url: 'setCookie.php',
+      data: { cookie: '/css/style2.css' },
+    });
+  });
+  </script>
 @endsection

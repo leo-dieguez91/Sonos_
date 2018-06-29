@@ -108,6 +108,15 @@ button:hover{
   background-color: #5e5e8f;
 }
 
+.btn-trash:hover{
+  transform: scale(1.4);
+  color: #dc3545;
+}
+
+.btn-image:hover{
+  transform: scale(1.4);
+}
+
 .boton-distinto{
 
                 background: rgba(26, 56, 5, 0);

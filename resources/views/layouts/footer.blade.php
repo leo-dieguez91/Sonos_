@@ -11,9 +11,8 @@
     <div class="col-xs-12 col-sm-3">
       <h5>Comunidad</h5><br>
        <ul class="footer-item">
-        <li><a href="#">Grupos</a></li><br>
-        <li><a href="#">Calendario</a></li><br>
-        <li><a href="#">Ciudades</a></li><br>
+        <li><a href="/home">Nuestra red</a></li><br>
+        <li><a href="/eventos">Eventos</a></li><br>
       </ul><br>
     </div>
     <div class="col-xs-12 col-sm-3">

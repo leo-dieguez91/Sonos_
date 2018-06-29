@@ -87,6 +87,15 @@ ul, ol{
   background-color: #c3d5d4;
 }
 
+.btn-trash:hover{
+  transform: scale(1.4);
+  color: #dc3545;
+}
+
+.btn-image:hover{
+  transform: scale(1.4);
+}
+
 button:hover{
   background-color: #c3d5d4;
 }

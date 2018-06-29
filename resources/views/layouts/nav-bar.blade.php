@@ -32,14 +32,12 @@
 
         <div class="nav-mobie">
           <div id="mySidenav" class="sidenav">
-            <a href="index.php"><img src="image/logosm.png" alt="logosm"></a>
+            <a href="/"><img src="image/logosm.png" alt="logosm"></a>
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a class="nav-link" href="/">Home</a>
+            <a class="nav-link" href="/home">Home</a>
             <a href="/faq">Acerca de Sonos!</a>
             <a href="/#QuienesSomos">Quienes Somos</a>
-            <a href="#">Grupos</a>
-            <a href="#">Calendario</a>
-            <a href="#">Ciudades</a>
+            <a href="/eventos">Eventos</a>
           </div>
           <span class="ion-navicon-round"style="font-size:1.8em;cursor:pointer;line-height:55px;color:black " onclick="openNav()"></span>
         </div>
@@ -47,44 +45,6 @@
 
         <div class="col-6 col-lg-5 p-1">
           @guest
-
-          {{-- <form method="POST" action="{{ route('login') }}">
-              @csrf
-            <div class="form-inline ">
-              <div class="col-10 col-sm-9 col-md-8 col-lg-8 p-0 ml-lg-auto">
-                <div class="input-group mr-2 ">
-
-                    <input type="text" name="4" class="form-control mr-2 col-7" id="inlineFormInputName2" placeholder="Email" value="" data-toggle="tooltip" title="" value="{{old('email')}}">
-                    @if ($errors->has('email'))
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $errors->first('email') }}</strong>
-                        </span>
-                    @endif
-                    <!-- <span class="errores2">?></span> -->
-
-                    <input type="password" name="pass" class="form-control col-5" id="inlineFormInputName2" placeholder="Contraseña" value="" data-toggle="tooltip" title="">
-                    @if ($errors->has('password'))
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $errors->first('password') }}</strong>
-                        </span>
-                    @endif
-                    <!-- <span class="errores2">?></span> -->
-
-                </div>
-              </div>
-
-              <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-
-              <button type="submit" class="btn btn-sm ml-1 pl-2 pr-2 hidden-xs" style="font-size: 0.6em;font-weight:bold;" name="login"> <span class="ion-log-in"></span> Ingresar </button>
-              <button type="submit" class="btn btn-sm button-small ml-2 p-0 px-2"style="font-size: 0.7em;font-weight:bold;" name="login"> <span class="ion-log-in"></span></button>
-            </div>
-            <div class="form-check ajusteleft">
-              <label class="form-check-label" style="font-size: 0.7em; color:black;"><input class="form-check-input" type="checkbox" name="recordar">Recordarme</label>
-              <a href="#" class="ml-1 ml-sm-5">¿Olvidaste tu contraseña?</a>
-            </div>
-          </form> --}}
-            {{-- col-10 col-sm-9 col-md-8 col-lg-8 --}}
-
             <div class="p-0 mt-2 mx-5">
               <button type="button" class="btn btn-sm ml-1 pl-2 pr-2 float-right" name="button"><a href="/"><span class="ion-log-in"></span> Registrate!</a></button>
             </div>
@@ -113,15 +73,15 @@
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="/home">Home</a>
               <div class="dropdown-divider"></div>
+              <button class="dropdown-item" style='cursor:pointer' type="button" name="button" id="sonosA">Purple theme</button>
+              <div class="dropdown-divider"></div>
+              <button class="dropdown-item" style='cursor:pointer' type="button" name="button" id="sonosB">Light theme</button>
+              <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="{{ route('logout') }}"
                  onclick="event.preventDefault();
                                document.getElementById('logout-form').submit();">
                   {{ __('Cerrar Sesión') }}
               </a>
-              <div class="dropdown-divider"></div>
-              <button class="dropdown-item" style='cursor:pointer' type="button" name="button" id="sonosA">Purple theme</button>
-              <div class="dropdown-divider"></div>
-              <button class="dropdown-item" style='cursor:pointer' type="button" name="button" id="sonosB">Light theme</button>
               <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                   @csrf
               </form>
