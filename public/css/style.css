@@ -302,3 +302,40 @@ border-radius: 5px;
 
 /* fin modal */
 /* eventos fin */
+
+
+
+.faq-body{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  /* background-color: #37ded4; */
+}
+.faq-content{
+  display: flex;
+  padding-top: 45px;
+}
+.faq-indice{
+  display: flex;
+  padding-top: 45px;
+  justify-content: flex-start;
+  text-decoration: none;
+  /* align-items: center; */
+}
+
+.faq-body h2{
+  color: #2a4598;
+  font-weight: bold;
+}
+
+.faq-indice a{
+  color: #000000;
+  font-size: 1.9em;
+}
+.faq-indice a:hover{
+  color: #2a4598;
+}
+
+.faq-content li{
+  border-bottom: 1px solid #949494;
+}

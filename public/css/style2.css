@@ -230,3 +230,39 @@ header .form-control{
 }
 
 /* animacion text fin */
+
+
+.faq-body{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  /* background-color: #37ded4; */
+}
+.faq-content{
+  display: flex;
+  padding-top: 45px;
+}
+.faq-indice{
+  display: flex;
+  padding-top: 45px;
+  justify-content: flex-start;
+  text-decoration: none;
+  /* align-items: center; */
+}
+
+.faq-body h2{
+  color: #8faaa9;
+  font-weight: bold;
+}
+
+.faq-indice a{
+  color: #000000;
+  font-size: 1.9em;
+}
+.faq-indice a:hover{
+  color: #8faaa9;
+}
+
+.faq-content li{
+  border-bottom: 1px solid #949494;
+}
