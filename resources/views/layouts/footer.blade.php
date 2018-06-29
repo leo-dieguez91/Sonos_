@@ -4,8 +4,12 @@
     <div class="col-xs-12 col-sm-3">
       <h5>Tu cuenta</h5>
        <ul class="footer-item"><br>
+         @guest
         <li><a href="/">Registrate</a></li><br>
         <li><a href="/login">Iniciar sesión</a></li><br>
+        @else
+        <li><a href="/perfil">Perfil</a></li><br>
+        @endguest
       </ul><br>
     </div>
     <div class="col-xs-12 col-sm-3">
