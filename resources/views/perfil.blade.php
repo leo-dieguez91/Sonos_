@@ -10,7 +10,10 @@
       </div>
     </div>
     <hr>
-
+    <div class="">
+      <strong>Editar Perfil:</strong>
+    </div>
+    <br>
     <div class="row d-block">
       <div class="data-form">
         <form  method="post" enctype="multipart/form-data">
@@ -19,13 +22,13 @@
             <div class="col-sm-4 d-inline">
               <div class="form-group">
                 <label class="control-label">Nombre: {{ Auth::user()->first_name}} </label>
-                <input type="text" class="form-control" name="first_name" value="" placeholder="Nombre">
+                <input type="text" class="form-control" name="first_name" value="" placeholder="Nuevo nombre">
               </div>
             </div>
             <div class="col-sm-4 d-inline">
               <div class="form-group">
                 <label class="control-label">Apellido: {{ Auth::user()->last_name}}</label>
-                <input type="text" class="form-control" name="last_name" value="" placeholder="Apellido">
+                <input type="text" class="form-control" name="last_name" value="" placeholder="Nuevo apellido">
               </div>
             </div>
           </div>
@@ -33,7 +36,7 @@
             <div class="col-sm-4">
               <div class="form-group d-inline">
                 <label class="control-label">Email: {{ Auth::user()->email}}</label>
-                <input class="form-control{{ $errors->has('email') ? ' invalid-input' : '' }}" type="text" name="email" value="" placeholder="Email">
+                <input class="form-control{{ $errors->has('email') ? ' invalid-input' : '' }}" type="text" name="email" value="" placeholder="Nuevo e-mail">
                 <label class="errores" required>
                   @foreach ($errors->get('email') as $error)
                     {{ $error }}
@@ -68,8 +71,8 @@
             </div>
             <div class="col-sm-4">
               <div class="form-group">
-                <label class="control-label">Confirmar contraseña:</label>
-                <input class="form-control{{ $errors->has('password') ? ' invalid-input' : '' }}" type="password" name="password_confirmation" placeholder="Contraseña">
+                <label class="control-label">Confirmar nueva contraseña:</label>
+                <input class="form-control{{ $errors->has('password') ? ' invalid-input' : '' }}" type="password" name="password_confirmation" placeholder="">
                 <label class="errores">
                   @foreach ($errors->get('password') as $error)
                     {{ $error }}
@@ -79,7 +82,7 @@
             </div>
           </div>
 
-          <button class="btn" type="submit" name="perfil">Cambiar</button>
+          <button class="btn" type="submit" name="perfil">Enviar cambios</button>
         </form>
 
       </div>
