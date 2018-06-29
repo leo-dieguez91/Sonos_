@@ -37,5 +37,6 @@
   </footer>
 
   @yield('section3')
+  @yield('section4')
 </body>
 </html>

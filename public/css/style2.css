@@ -180,6 +180,20 @@ header .form-control{
    animation-duration: 1s;
 }
 
+.linea-hr{
+  border-color: #e7e7e7;
+}
+
+.button-style{
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes text-movido {
     0%   {font-size: 0.1em;}

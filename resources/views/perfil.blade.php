@@ -53,10 +53,11 @@
               </div>
             </div>
           </div>
+          {{-- <hr class="linea-hr"> --}}
           <div class="row justify-content-center">
             <div class="col-sm-4">
               <div class="form-group">
-                <label class="control-label">Cambiar contraseña:</label>
+                <label class="control-label">Nueva contraseña:</label>
                 <input class="form-control{{ $errors->has('password') ? ' invalid-input' : '' }}" type="password" name="password" value="">
                 <label class="errores">
                   @foreach ($errors->get('password') as $error)
@@ -65,10 +66,9 @@
                 </label>
               </div>
             </div>
-
             <div class="col-sm-4">
               <div class="form-group">
-                <label class="control-label">Confirmar cambios:</label>
+                <label class="control-label">Confirmar contraseña:</label>
                 <input class="form-control{{ $errors->has('password') ? ' invalid-input' : '' }}" type="password" name="password_confirmation" placeholder="Contraseña">
                 <label class="errores">
                   @foreach ($errors->get('password') as $error)
@@ -78,6 +78,7 @@
               </div>
             </div>
           </div>
+
           <button class="btn" type="submit" name="perfil">Cambiar</button>
         </form>
 
@@ -88,8 +89,8 @@
 @endsection
 
 @section('section2')
-  <button class="btn1" type="button" name="button" id="sonosA">Tema 1</button>
-   <button class="btn2" type="button" name="button" id="sonosB">Tema 2</button>
+  {{-- <button class="btn1" type="button" name="button" id="sonosA">Tema 1</button>
+   <button class="btn2" type="button" name="button" id="sonosB">Tema 2</button> --}}
 @endsection
 
 @section('section3')

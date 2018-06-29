@@ -35,4 +35,27 @@ class HomeController extends Controller
     {
       return view('faq');
     }
+
+    public function replaceUserData(Request $request){
+
+      $request = request();
+
+      $post = $request->post();
+
+      $validateUserData = $request->validate([
+        'picture' => 'sometimes|nullable|image|mimes:jpeg,bmp,png,jpg'
+      ]);
+
+      if ($request->avatar) {
+        $file = $request->file('avatar');
+        $folder = "avatar";
+        $name = $user->email . '.' . $file->extension();
+        $path = $file->storePubliclyAs($folder, $name, 'public');
+        $user->picture = $name;
+      }
+
+      $post->save();
+
+      return redirect('perfil');
+    }
 }

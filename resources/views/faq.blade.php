@@ -78,3 +78,29 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="js/bootstrap.min.js" ></script>
 @endsection
+
+@section('section3')
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+ <script>
+   $('#sonosA').click(function() {
+     var linkCSS = document.querySelector('#theme');
+     linkCSS.setAttribute('href', '/css/style.css');
+     $.ajax({
+         type: 'POST',
+         url: 'setCookie.php',
+         data: { cookie: '/css/style.css' },
+     });
+   });
+
+   $('#sonosB').click(function() {
+     var linkCSS = document.querySelector('#theme');
+     linkCSS.setAttribute('href', '/css/style2.css');
+     $.ajax({
+         type: 'POST',
+         url: 'setCookie.php',
+         data: { cookie: '/css/style2.css' },
+     });
+   });
+ </script>
+@endsection

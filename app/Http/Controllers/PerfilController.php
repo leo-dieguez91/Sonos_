@@ -50,8 +50,6 @@ class PerfilController extends Controller
     $user->save();
 
     return redirect('perfil');
-
-
   }
 
 

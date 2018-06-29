@@ -135,4 +135,27 @@
 @section('section3')
   <script src="js/welcome.js"></script>
   <script src="js/formValidate.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+   <script>
+     $('#sonosA').click(function() {
+       var linkCSS = document.querySelector('#theme');
+       linkCSS.setAttribute('href', '/css/style.css');
+       $.ajax({
+           type: 'POST',
+           url: 'setCookie.php',
+           data: { cookie: '/css/style.css' },
+       });
+     });
+
+     $('#sonosB').click(function() {
+       var linkCSS = document.querySelector('#theme');
+       linkCSS.setAttribute('href', '/css/style2.css');
+       $.ajax({
+           type: 'POST',
+           url: 'setCookie.php',
+           data: { cookie: '/css/style2.css' },
+       });
+     });
+   </script>
+
 @endsection

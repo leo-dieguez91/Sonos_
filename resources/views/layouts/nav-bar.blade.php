@@ -118,6 +118,10 @@
                                document.getElementById('logout-form').submit();">
                   {{ __('Cerrar Sesión') }}
               </a>
+              <div class="dropdown-divider"></div>
+              <button class="dropdown-item" style='cursor:pointer' type="button" name="button" id="sonosA">Purple theme</button>
+              <div class="dropdown-divider"></div>
+              <button class="dropdown-item" style='cursor:pointer' type="button" name="button" id="sonosB">Light theme</button>
               <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                   @csrf
               </form>
