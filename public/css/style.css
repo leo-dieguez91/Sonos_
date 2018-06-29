@@ -109,12 +109,12 @@ button:hover{
 }
 
 .btn-trash:hover{
-  transform: scale(1.4);
+  transform: scale(1.4) rotate(10deg);
   color: #dc3545;
 }
 
 .btn-image:hover{
-  transform: scale(1.4);
+  transform: scale(1.4) rotate(-10deg);
 }
 
 .boton-distinto{
