@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="css/nav-bar.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/perfil.css">
+  <link rel="stylesheet" href="css/eventos.css">
   @if (isset($_COOKIE['cssTheme']))
    <link rel="stylesheet" href={{ $_COOKIE['cssTheme'] }} id="theme">
  @else
