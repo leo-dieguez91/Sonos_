@@ -28,10 +28,11 @@ class PostsController extends Controller
   public function savePost(){
     $request = request();
     $postID = Post::latest()->first();
-    $postID = $postID->id;
+    // $postID = $postID->id;
     if (!$postID) {
       $postID = 1;
     } else {
+      $postID = $postID->id;
       $postID += 1;
     }
 
