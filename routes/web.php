@@ -17,7 +17,7 @@ Route::post('/home', 'PostsController@savePost')->name('home');
 
 Route::post('/home/delete/{id}', 'PostsController@deletePost');
 
-Route::get('/perfil', 'PerfilController@show');
+Route::get('/perfil', 'PerfilController@show')->middleware('auth');;
 
 Route::post('/perfil', 'PerfilController@replaceUserData');
 
