@@ -125,7 +125,7 @@
         </div>
       </div>
 
-      <div class="row col-md-5 cont-img d-inline-block">
+      <div class="row col-md-5 cont-img d-inline-block my-5">
         <img class="d-block borde-img" src="https://www.locosxlosjuegos.com/wp-content/uploads/2017/11/392214-1021x578.jpg" style="width:100%; height:100%;cursor:zoom-in" onclick="document.getElementById('modal05').style.display='block'">
 
         <div id="modal05" class="w3-modal " onclick="this.style.display='none'">
@@ -136,7 +136,7 @@
         </div>
       </div>
 
-      <div class="row col-md-5 cont-img d-inline-block">
+      <div class="row col-md-5 cont-img d-inline-block my-5">
         <img class="d-block borde-img" src="https://i.ytimg.com/vi/6iajXJIp_eU/maxresdefault.jpg" style="width:100%; height:100%;cursor:zoom-in" onclick="document.getElementById('modal06').style.display='block'">
 
         <div id="modal06" class="w3-modal " onclick="this.style.display='none'">
@@ -149,6 +149,7 @@
 
 
     </div>
+    <br><br>
   </div>
 
 
