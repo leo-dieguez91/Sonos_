@@ -66,7 +66,7 @@
                   </label>
                 </div>
 
-                <div class="col-lg-5 ml-sm-auto d-inline-block float-left p-0">
+                <div class="col-lg-5 d-block float-left p-0">
                   <label for="">
                     <select class="form-control" id="paises" name='country' data-info="'país'">
                       <option value="">País:</option>
@@ -74,7 +74,7 @@
                   </label>
                 </div>
 
-                <div class="col-lg-6 ml-sm-auto d-inline-block float-right p-0">
+                <div class="col-lg-6 d-block float-right p-0">
                   <label for="">
                     <select class="form-control" id="provincias" name='state' data-info="'provincia'">
                       <option value="">Provincias:</option>
