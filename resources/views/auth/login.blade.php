@@ -36,11 +36,11 @@
 
                 <div class="form-group">
                   <button class="btn my-3" type="submit" name="login">Ingresar</button>
-                  <button class="btn" type="submit" name="passwordReset">
+                  {{-- <button class="btn" type="submit" name="passwordReset">
                     <a href="{{ route('password.request') }}">
                       Olvidaste tu contraseña?
                     </a>
-                  </button>
+                  </button> --}}
                 </div>
               </form>
 
