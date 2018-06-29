@@ -1,14 +1,12 @@
 <header class="header-main fixed-top"> <!-- fixed-top -->
-  <div class="header-sup ">
-
+  {{-- <div class="header-sup "> --}}
+  <div class="container-flex">
     <div class="row justify-content-between mb-2">
-      <div class="align-items-start col-6 col-lg-6">
-        <div class="col-6">
+      <div class="align-items-start col-2 col-lg-6">
+        <div class="col-2">
           <nav class="navbar navbar-expand-lg p-0">
             <div class="collapse navbar-collapse">
-
               <a href="/"><img src="image/logosm.png" alt="logosm" >  </a>
-
               <ul class="navbar-nav mt-2">
                 <li class="nav-item active">
                   <a class="nav-link decoracion-borde" href="/home">Home</a>
@@ -23,13 +21,10 @@
                   <a class="nav-link" href="/eventos">Eventos</a>
                 </li>
               </ul>
-
             </div>
           </nav>
-
         </div>
-
-
+        <div class="col-2">
         <div class="nav-mobie">
           <div id="mySidenav" class="sidenav">
             <a href="/"><img src="image/logosm.png" alt="logosm"></a>
@@ -41,9 +36,10 @@
           </div>
           <span class="ion-navicon-round"style="font-size:1.8em;cursor:pointer;line-height:55px;color:black " onclick="openNav()"></span>
         </div>
+        </div>
       </div>
 
-        <div class="col-6 col-lg-5 p-1">
+        <div class="col-10 col-lg-5 p-1">
           @guest
             <div class="p-0 mt-2 mx-5">
               <button type="button" class="btn btn-sm ml-1 pl-2 pr-2 float-right" name="button"><a href="/"><span class="ion-log-in"></span> Registrate!</a></button>
